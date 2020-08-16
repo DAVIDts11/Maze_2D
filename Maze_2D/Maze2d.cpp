@@ -120,19 +120,19 @@ int Maze2d::getColumns() const
 	return _columns;
 }
 
-Pos Maze2d::getEnter() const
+Pos2d Maze2d::getEnter() const
 {
-	Pos entre(_entry.first, _entry.second);
+	Pos2d entre(_entry.first, _entry.second);
 	return entre;
 }
 
-Pos Maze2d::getExit() const
+Pos2d Maze2d::getExit() const
 {
-	Pos exit(_exit.first, _exit.second);
+	Pos2d exit(_exit.first, _exit.second);
 	return exit;
 }
 
-bool Maze2d::isValidMove(Pos  pos) const
+bool Maze2d::isValidMove(Pos2d  pos) const
 {
 	if ((pos.Getcol() < 0) || (pos.Getcol() > _columns) || (pos.Getrow() < 0) || (pos.Getrow() > _rows))
 		return false;
@@ -182,13 +182,13 @@ std::vector<std::pair<int, int>> Maze2d::getWallsSurround(std::pair<int, int> cu
 	return moves;
 }
 
-vector<Pos> Maze2d::getPosiblePlayerMoves(Pos pos)
+vector<Pos2d> Maze2d::getPosiblePlayerMoves(Pos2d pos)
 {
-	vector<Pos> posibleMoves;
-	Pos up(pos.Getrow() - 1, pos.Getcol());
-	Pos right(pos.Getrow(), pos.Getcol() + 1);
-	Pos down(pos.Getrow() + 1, pos.Getcol());
-	Pos left(pos.Getrow(), pos.Getcol() - 1);
+	vector<Pos2d> posibleMoves;
+	Pos2d up(pos.Getrow() - 1, pos.Getcol());
+	Pos2d right(pos.Getrow(), pos.Getcol() + 1);
+	Pos2d down(pos.Getrow() + 1, pos.Getcol());
+	Pos2d left(pos.Getrow(), pos.Getcol() - 1);
 
 	if (isValidMove(up) && _grid[pos.Getrow() - 1][pos.Getcol()].isEmpty())
 		posibleMoves.push_back(up);
@@ -246,7 +246,7 @@ void Maze2d::clearWalls()
 				_grid[i][j].breakTheWall();
 }
 
-void Maze2d::blackCell(Pos pos)
+void Maze2d::blackCell(Pos2d pos)
 {
 	_grid[pos.Getrow()][pos.Getcol()].Visited();
 }

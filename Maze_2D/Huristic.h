@@ -1,29 +1,30 @@
 #pragma once
-#include "pos.h"
+#include "pos2d.h"
 
 
-
+template<class T>
 class hurisicCalc {
 public:
-	virtual float Calc(Pos curr, Pos end) = 0;
+	virtual float Calc( T curr, T end) = 0;
 };
 
-class ManhetenUristic :public hurisicCalc {
+
+class Manheten2dUristic :public hurisicCalc<Pos2d> {
 public:	
-	ManhetenUristic() {}
-	~ManhetenUristic() {}
-	virtual float Calc(Pos curr, Pos end)
+	Manheten2dUristic() {}
+	~Manheten2dUristic() {}
+	virtual float Calc(Pos2d curr, Pos2d end)
 	{
 		return float(fabs(curr.Getrow()-end.Getrow())+fabs(curr.Getcol()-end.Getcol()));
 	}
 };
 
 
-class AirLineUristic :public hurisicCalc {
+class AirLine2dHuristic :public hurisicCalc<Pos2d> {
 public:
-	AirLineUristic(){}
-	~AirLineUristic() {}
-	virtual float Calc(Pos curr, Pos end)
+	AirLine2dHuristic(){}
+	~AirLine2dHuristic() {}
+	virtual float Calc(Pos2d curr, Pos2d end)
 	{
 		return float(sqrt(pow((end.Getrow()- curr.Getrow()),2)+pow((end.Getcol()- curr.Getcol()),2)));
 		

@@ -27,7 +27,7 @@
     <ClInclude Include="MazeCompression.h" />
     <ClInclude Include="MazeSearchAdapt.h" />
     <ClInclude Include="mymaze2dgenerator.h" />
-    <ClInclude Include="pos.h" />
+    <ClInclude Include="pos2d.h" />
     <ClInclude Include="searchAlg.h" />
     <ClInclude Include="simplemaze2dgenerator.h" />
   </ItemGroup>
@@ -40,7 +40,7 @@
     <ClCompile Include="MazeCompression.cpp" />
     <ClCompile Include="MazeSearchAdapt.cpp" />
     <ClCompile Include="mymaze2dgenerator.cpp" />
-    <ClCompile Include="pos.cpp" />
+    <ClCompile Include="pos2d.cpp" />
     <ClCompile Include="searchAlg.cpp" />
     <ClCompile Include="simplemaze2dgenerator.cpp" />
   </ItemGroup>

@@ -30,9 +30,6 @@
     <ClInclude Include="mymaze2dgenerator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="pos.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="searchAlg.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -48,12 +45,12 @@
     <ClInclude Include="Huristic.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="pos2d.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mymaze2dgenerator.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="pos.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="searchAlg.cpp">
@@ -81,6 +78,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Maze2d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pos2d.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

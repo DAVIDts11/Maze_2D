@@ -4,7 +4,7 @@
 #include <iostream>
 #include <vector>
 #include "Cell.h"
-#include "pos.h"     ///ch
+#include "pos2d.h"     ///ch
 #include <ctime>
 
 //COLORS
@@ -38,8 +38,8 @@ public:
 	//simple gets
 	int getRows()  const;  // ch
 	int getColumns()const;  // ch
-	Pos getEnter()const;    // ch
-	Pos getExit() const;    // ch
+	Pos2d getEnter()const;    // ch
+	Pos2d getExit() const;    // ch
 	std::pair<int, int> getEntryCell();          // ??
 	std::pair<int, int> getExitCell();           // ?? 
 
@@ -49,9 +49,9 @@ public:
 	vector<pair<int, int>> getPossibleMoves(vector<pair<int, int>> walls, pair <int, int> pos); //using previous method
 
 	//for Player/solve algorithm
-	bool isValidMove(Pos pos)const;                      // ch
-	vector<Pos> getPosiblePlayerMoves(Pos pos);          // ch
-	void blackCell(Pos pos);                             // ch
+	bool isValidMove(Pos2d pos)const;                      // ch
+	vector<Pos2d> getPosiblePlayerMoves(Pos2d pos);          // ch
+	void blackCell(Pos2d pos);                             // ch
 
 
 public:
